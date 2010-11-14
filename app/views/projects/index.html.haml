@@ -1,0 +1,94 @@
+
+								
+- @items = Array.new(@projects.length){[]}
+
+- i = 0
+-@projects.each do |p|
+	-@items[i] << '{url:"'+p.image_url+'", name:"'+p.title+'", task:"'+p.description+'", ext_url:"'+p.ext_url+'", position:"'+(i+1).to_s+'"},'
+	- i += 1
+	
+
+
+
+	
+:javascript
+	var mycarousel_itemList = [
+		#{@items}
+	
+	];
+
+	function mycarousel_itemLoadCallback(carousel, state)
+	{
+			$(".description").fadeOut();
+	    for (var i = carousel.first; i <= carousel.last; i++) {
+	        if (carousel.has(i)) {
+	            continue;
+	        }
+
+	        if (i > mycarousel_itemList.length) {
+	            break;
+	        }
+
+	        carousel.add(i, mycarousel_getItemHTML(mycarousel_itemList[i-1]));
+	    }
+	};
+	
+	function pad2(number) {
+		return (number < 10 ? '0' : '') + number
+	}
+
+	
+	function showDescription()
+	{
+		$(".description").fadeIn();
+	}
+
+	/**
+	 * Item html creation helper.
+	 */
+	function mycarousel_getItemHTML(item)
+	{
+		return '<img src="' + item.url + '" width="960" height="640" /><div class="description"><div class="position">'+pad2(parseFloat(item.position))+'/#{@items.count}</div><div class="name"><a href="'+item.ext_url+'">' + item.name + '</a></div><div class="task">' + item.task + '</div></div>';
+	};
+
+	jQuery(document).ready(function() {
+			
+	    jQuery('#mycarousel').jcarousel({
+	        size: mycarousel_itemList.length,
+					easing: "easeInOutQuart",
+					scroll: 1,
+					visible: 1,
+					animation: 800,
+	        itemLoadCallback: {onBeforeAnimation: mycarousel_itemLoadCallback},
+					itemFirstInCallback: {onAfterAnimation: showDescription}
+	    });
+	
+			$('.jcarousel-container').mouseover(function() {
+				$('.jcarousel-next').css({visibility: "visible"})
+				$('.jcarousel-prev').css({visibility: "visible"})
+			});
+			$('.jcarousel-container').mouseout(function() {
+				$('.jcarousel-next').css({visibility: "hidden"})
+				$('.jcarousel-prev').css({visibility: "hidden"})
+			});
+		
+	
+	});
+	
+	
+	
+
+%style{:type => "text/css"}
+	:sass
+		.jcarousel-next, .jcarousel-prev 
+			visibility: hidden
+
+
+#header
+	%h1
+		= link_to image_tag("/images/rrrr_logo.png"), "/"
+#portfolio
+	%ul#mycarousel
+
+			
+			

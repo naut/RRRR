@@ -1,0 +1,41 @@
+!!!
+	
+%html
+	%head
+		%title 
+			RRRR
+		
+		%meta{'http-equiv' => 'Content-Type', :content => 'text/html', :charset => 'utf-8'}
+		%meta{'name' => 'keywords', :content => 'RRRR, GRRRREAT, marcel, uekermann, bartholomäus, traubeck, whatthemovie, awesome'}
+		%meta{'name' => 'description', :content => ''}
+		%meta{'http-equiv' => 'content-language', :content => 'en'}
+		%meta{'name' => 'robots', :content => 'index,follow'}
+		%meta{'name' => 'author', :content => 'Marcel Uekermann, Bartholomäus Traubeck'}
+		
+		%link{:rel => "icon", :href => "/favicon.ico", :type => "image/vnd.microsoft.icon"}
+		
+		-# CSS
+		= stylesheet_link_tag "portfolio", :media => "all"
+			
+			
+		-# JS
+		= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+		= javascript_include_tag "jquery/jquery.easing.1.3.js"
+		= javascript_include_tag "jquery/jquery.jcarousel.min.js"
+
+
+		
+						
+	%body
+	
+		=yield
+		
+		#footer
+			%ul.clearfix
+				%li=link_to "About us", "#"   
+				%li= link_to "Clients", "#"   
+				%li= link_to "Facebook", "#"   
+				%li= link_to "Twitter", "#"
+				%li= link_to "Vimeo", "#"
+				%li= link_to "Contact", "#"   
+				%li= link_to "Imprint", "#"

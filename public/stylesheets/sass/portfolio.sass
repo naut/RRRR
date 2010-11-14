@@ -1,0 +1,166 @@
+/* Awesome Stylesheet
+
+/* Normalising
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td 
+	margin: 0
+	padding: 0
+h1, h2, h3, h4, h5, h6 
+	font-size: 100%
+ol, ul 
+	list-style: none
+table 
+	border-spacing: 0
+fieldset, img 
+	border: 0
+caption, th 
+	text-align: left
+
+/* Basic Stuff
+
+abbr, acronym, .help 
+	font-style: italic
+	cursor: help
+
+
+
+a
+	outline: none
+	color: black
+	text-decoration: none
+
+.clearfix:after
+	content: "."
+	display: block
+	height: 0
+	clear: both
+	visibility: hidden
+	
+.clearfix 
+	zoom: 1
+
+.clearer
+	clear: both
+	
+.floatleft
+	float: left
+
+/* Application Layout
+
+body
+	font: 85%/1.5em Arial, Helvetica, Tahoma, sans-serif
+	min-width: 990px
+	background: url(/images/body_bg.png) no-repeat top center
+
+
+
+img
+	margin: 0
+	padding: 0
+
+
+#header	
+	width: 960px
+	margin: 0 auto
+	height: 50px
+	h1
+		
+		padding: 16px 0 0 0
+
+#portfolio
+	margin: 0 auto
+	height: 680px
+	width: 960px
+	background: white
+	background: url(/images/portfolio_shadow.jpg) no-repeat
+
+	
+.jcarousel-next
+	background: url(/images/portfolio_next.png) no-repeat
+	height: 65px
+	width: 80px
+	display: block
+	position: absolute
+	right: -10px
+	top: 290px
+	cursor: pointer
+	&:hover
+		background-position: 0 -65px
+	&:active
+		background-position: 0 -130px
+		
+.jcarousel-prev
+	background: url(/images/portfolio_prev.png) no-repeat
+	height: 65px
+	width: 80px
+	display: block
+	position: absolute
+	left: -10px
+	top: 290px
+	cursor: pointer
+	&:hover
+		background-position: 0 -65px
+	&:active
+		background-position: 0 -130px
+		
+.jcarousel-prev-disabled, .jcarousel-next-disabled	
+	display: none !important	
+		
+.jcarousel-container-horizontal 
+	width: 960px
+
+
+.jcarousel-clip-horizontal 
+	width: 960px
+	height: 680px
+
+.jcarousel-item 
+	width: 960px
+	height: 680px
+	background: url(/images/ajax-loader.gif) no-repeat center
+	
+	img
+		float: left
+
+
+.description
+	clear: both
+	display: none
+	line-height: 39px
+	height: 39px
+	
+	font-size: 100%
+	
+	.name
+		float: left
+		a
+			color: black
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.task
+		float: right
+		color: #666
+		font-size: 90%
+	.position
+		float: left
+		margin: 0 10px 0 0
+		color: #999
+		font-size: 90%
+		
+#footer
+	width: 960px
+	font-size: 90%
+	background: url("/images/footer_bg.png") top left no-repeat
+	padding: 30px 0 0 0
+	margin: 10px auto 10px auto
+	
+	ul
+		li
+			float: left
+			margin: 0 10px 0 0
+			
+			a:hover
+				text-decoration: underline
+	
+	
