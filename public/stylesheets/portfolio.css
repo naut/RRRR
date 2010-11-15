@@ -64,7 +64,7 @@ img {
 
 #portfolio {
   margin: 0 auto;
-  height: 680px;
+  height: 610px;
   width: 960px;
   background: white;
   background: url(/images/portfolio_shadow.jpg) no-repeat; }
@@ -105,11 +105,11 @@ img {
 
 .jcarousel-clip-horizontal {
   width: 960px;
-  height: 680px; }
+  height: 610px; }
 
 .jcarousel-item {
   width: 960px;
-  height: 680px;
+  height: 610px;
   background: url(/images/ajax-loader.gif) no-repeat center; }
   .jcarousel-item img {
     float: left; }
