@@ -58,16 +58,17 @@ img {
 #header {
   width: 960px;
   margin: 0 auto;
-  height: 50px; }
+  height: 40px; }
   #header h1 {
     padding: 16px 0 0 0; }
 
 #portfolio {
   margin: 0 auto;
-  height: 610px;
+  height: 600px;
   width: 960px;
+  padding: 10px;
   background: white;
-  background: url(/images/portfolio_shadow.jpg) no-repeat; }
+  background: url(/images/portfolio_shadow.png) no-repeat; }
 
 .jcarousel-next {
   background: url(/images/portfolio_next.png) no-repeat;
@@ -117,16 +118,17 @@ img {
 .description {
   clear: both;
   display: none;
-  line-height: 39px;
-  height: 39px;
+  line-height: 50px;
+  height: 50px;
   font-size: 100%; }
   .description .name {
     float: left; }
     .description .name a {
       color: black;
-      text-decoration: none; }
+      text-decoration: none;
+      padding: 0 0 3px 0; }
       .description .name a:hover {
-        text-decoration: underline; }
+        border-bottom: 1px solid black; }
   .description .task {
     float: right;
     color: #666666;
@@ -141,10 +143,13 @@ img {
   width: 960px;
   font-size: 90%;
   background: url("/images/footer_bg.png") top left no-repeat;
-  padding: 30px 0 0 0;
+  padding: 20px 0 0 0;
   margin: 10px auto 10px auto; }
   #footer ul li {
     float: left;
     margin: 0 10px 0 0; }
-    #footer ul li a:hover {
-      text-decoration: underline; }
+    #footer ul li a {
+      text-decoration: none;
+      padding: 0 0 3px 0; }
+      #footer ul li a:hover {
+        border-bottom: 1px solid black; }
